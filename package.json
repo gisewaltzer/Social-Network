@@ -1,6 +1,6 @@
 {
-  "name": "Social-Network",
-  
+  "name": "social-network-api",
+
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
