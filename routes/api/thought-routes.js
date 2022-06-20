@@ -2,14 +2,14 @@ const router = require('express').Router();
 
 // Require all of the routes from the thoughts controller
 const {
-    addThought,
-    getThoughts,
-    getThoughtById,
-    updateThoughtById,
-    deleteThoughtById,
-    addReaction,
-    deleteReaction
-} = require('../../controllers/thoughts-controller');
+  addThought,
+  getThoughts,
+  getThoughtById,
+  updateThoughtById,
+  deleteThoughtById,
+  addReaction,
+  deleteReaction
+} = require('../../controllers/thoughts-controlers');
 
 // /api/thoughts/:thoughtId
 router

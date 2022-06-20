@@ -7,9 +7,9 @@ const thoughtsController = {
     addThought({ body }, res) {
         Thoughts.create(body)
             .then(thoughts => {
-                console.log(body.userId);
+                console.log(body.username);
                 return Users.findOneAndUpdate(
-                    { _id: body.userId },
+                    { username: body.username },
                     { $push: { thoughts: thoughts._id } },
                     { new: true }
                 )
@@ -76,7 +76,7 @@ const thoughtsController = {
                     { $pull: { thoughts: params.thoughtId } },
                     { new: true, runValidators: true }
                 ).then(() => res.json({ message: 'Successfully deleted the thought' }))
-                .catch((err) => res.status(500).json(err));
+                    .catch((err) => res.status(500).json(err));
             })
     },
 
